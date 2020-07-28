@@ -1,0 +1,25 @@
+<mat-toolbar style="text-align: center;" color="primary">
+  <mat-toolbar-row>
+    <span class="span">Login ke Aplikasi Buku Alamat</span>
+</mat-toolbar-row>
+</mat-toolbar>
+    <p style=" margin-top: 25px;text-align: center;">
+      Pastikan email anda sudah terdaftar*
+    </p>
+<div style="padding:20px; margin-top: -20px;">
+<mat-card style="width: 30%;text-align: center; position: fixed; margin-left: 440px;" >
+  <mat-card-content>
+  <mat-form-field style="width:80%;">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Masukan Email Anda" [(ngModel)]="data.username">
+    </mat-form-field>    
+    <mat-form-field style="width: 80%;">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Masukan Kata Sandi" [(ngModel)]="data.password">
+    </mat-form-field>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="masuk(data)">MASUK</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
+</div>

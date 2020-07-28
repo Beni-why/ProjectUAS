@@ -1,0 +1,26 @@
+<ng-container>
+    <mat-toolbar class="example-header">
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Aplikasi Manager</span>
+    </mat-toolbar>  
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+                   [fixedInViewport]="true" [fixedTopGap]="60"
+                   [fixedBottomGap]="0">
+        <mat-nav-list>
+            <mat-list-item>
+                <h3 matLine>Daftar Karyawan</h3>
+                <mat-divider></mat-divider>
+            </mat-list-item>        
+        </mat-nav-list>      
+      </mat-sidenav>
+      <!--sidenav content-->
+      <mat-sidenav-content style="padding: 20px;">
+        <!--halaman-halaman tampil disini-->
+       <router-outlet></router-outlet>
+      </mat-sidenav-content>
+      <!--end sidenav content-->
+    </mat-sidenav-container>   
+  </ng-container>

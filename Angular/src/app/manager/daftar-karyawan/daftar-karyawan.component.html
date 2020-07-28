@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Daftar Karyawan</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-nav-list>
+            <mat-list-item *ngFor="let n of [1,2,3,4,5,6,7,8,9,10]" routerLink="/manager/app/detail-karyawan/{{n}}">
+                <h3 matLine>Karyawan {{n}}</h3>
+                <p matLine>Divisi 00{{n}}</p>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-card-content>
+</mat-card>
